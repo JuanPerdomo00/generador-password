@@ -7,7 +7,7 @@ import time
 
 def banner():
     print("="*36)
-    print("[+] Generado password by jakepy [+]")
+    print("[+] Generador password by jakepy [+]")
     print("="*36)
 
 
