@@ -32,7 +32,7 @@ def main():
     banner()
     password = generate(leingth_pass())
     print("\n[+] Generando...\n")
-    time.sleep(1.5)
+    time.sleep(1.6)
     print(f"[+] Su nueva password es: {password}")
 
 if __name__ == '__main__':
