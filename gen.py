@@ -15,7 +15,7 @@
 # Hay ejemplos de cómo usar este código en el README.md.
 #
 # Cual quier duda escribeme, o talvez este dormido jsjs.
-# 
+
 
 import caracteres as car 
 import random
