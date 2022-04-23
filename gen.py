@@ -2,7 +2,7 @@
 # _*_ coding: utf-8 -*-
 #
 # Creador: Jakepy Perdomo <j4kyjak3@protonmail.com>
-# Título: Generadir de contraseña
+# Título: Generador de contraseña
 # FechaCreación: 17-abr-22
 #
 # Código simple de un generador de contraseña.
