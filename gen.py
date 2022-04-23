@@ -3,7 +3,7 @@
 #
 # Creador: Jakepy Perdomo <j4kyjak3@protonmail.com>
 # Título: Generador de contraseña
-# FechaCreación: 17-abr-22
+# FechaCreación: 8-abr-22
 #
 # Código simple de un generador de contraseña.
 # Copyright (c) 2022 Jakepy Perdomo <j4kyjak3@protonmail.com>. 
