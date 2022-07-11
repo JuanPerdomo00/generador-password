@@ -9,7 +9,7 @@ import string
 # NUMS =  ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 # CHARS = ['*', '+', '-', '/', '@', '_', '?', '!', '(', '[', '{', ')', '}', ']', ',', ';', '.', '>', '<', '~', '°', '^', '&', '$', '#', '"']
 
- MAYUS = string.ascii_uppercase
- MINUS = string.ascii_lowercase
- NUMS = string.punctuation
- CHARS = string.digits
+MAYUS = string.ascii_uppercase
+MINUS = string.ascii_lowercase
+NUMS = string.punctuation
+CHARS = string.digits
