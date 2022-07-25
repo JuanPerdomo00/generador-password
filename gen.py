@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# _*_ coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 #
 # Creador: Jakepy Perdomo <j4kyjak3@protonmail.com>
 # Título: Generador de contraseña
