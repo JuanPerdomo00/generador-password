@@ -6,7 +6,7 @@
 # FechaCreación: 8-abr-22
 #
 # Código simple de un generador de contraseña.
-# Copyright (c) 2022 Jakepy Perdomo <j4kyjak3@protonmail.com>. 
+# Copyright (c) 2022 Jakepy Perdomo <j4kyjak3@protonmail.com>.
 # Comentarios bienvenidos.
 #
 # Permiso otorgado para uso y distribución no comercial siempre que
@@ -17,39 +17,69 @@
 # Cual quier duda escribeme, o talvez este dormido jsjs.
 
 
-import caracteres as car 
+from errno import ECHILD
+from modules.Caracteres import Caracteres as Char
+from modules.Colors import Colors
 import random
 import time
 
+# constans
+C = Colors()
+OBJETOS = [
+    Char().minus,
+    Char().mayus,
+    Char().nums,
+    Char().char,
+]
+
+
 def banner():
-    print("="*36)
-    print("[+] Generador password by jakepy [+]")
-    print("="*36)
+    print(f"{C.green}[+] Generador password [+]{C.off}".center(50, "="), "\n")
 
 
 def leingth_pass():
-    n = int(input("\n[+] Ingrese la longitud de la password: "))
-    return n
+    try:
+        n = int(
+            input(f"\n{C.blue}[+] Ingrese la longitud de la password: {C.off}"))
+        return n
+    except ValueError as e:
+        print(f"\n{C.red}Error, asegurate de haber ingresado un numero {C.off}")
+        return exit(1)
+    except KeyboardInterrupt as e:
+        print(f"\n{C.red}bye...{C.off}")
+        return exit(1)
 
 
 def generate(n):
-    all_caracteres = car.CHARS + car.MAYUS + car.MINUS + car.NUMS
-
+    all_caracteres = OBJETOS[0] + OBJETOS[1] + OBJETOS[2] + OBJETOS[3]
     passwords = []
 
-    for i in range(n):
+    for _ in range(n):
         caracteres_ramdom = random.choice(all_caracteres)
         passwords.append(caracteres_ramdom)
 
     passwords = "".join(passwords)
-    return passwords
+    return passwords[::-1]
+
 
 def main():
     banner()
-    password = generate(leingth_pass())
-    print("\n[+] Generando...\n")
-    time.sleep(1.6)
-    print(f"[+] Su nueva password es: {password}")
+    try:
+        leingth_passwd = leingth_pass()
+        password = generate(leingth_passwd)
+        if len(password) >= 8:
+            print(f"\n{C.green}[+] Generando...{C.off}\n")
+            time.sleep(1.2)
+            print(f"{C.green}[+] Su nueva password es: {C.red}{password}{C.off}")
+        else:
+            print(f"{C.green}La longitud tiene que ser minimo de 8 {C.off}")
+            exit(0)
+    except KeyboardInterrupt as e:
+        print(f"\n{C.red}Bye ... {C.off}")
+        return exit(1)
+    except Exception:
+        print(f"\n{C.red}Error {C.off}")
+
 
 if __name__ == '__main__':
     main()
