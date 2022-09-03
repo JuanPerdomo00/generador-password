@@ -5,15 +5,15 @@ Apesar que que ya hay herramientas que crean contrasenas por defecto, este simpl
 
 # Usar binario
 ```sh
-# Linux, Unix
-chmod +x bin/genpy
+# Linux x64
+chmod +x gen.py
 
 #Ejecurar
 ./genpy
 
 
 # Para usarlo como comando de sistema
-sudo mv bin/genpy /usr/bin/
+sudo mv gen.py /usr/bin/genpy
 
 # Luego podremos llamarlo
 genpy
