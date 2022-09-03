@@ -2,6 +2,8 @@
 Un generador de password simple pero eficiente, sobre todo si utilizas keepass como gestor de password. Pasando como argumento la longitud de la contrasena a crear.
 Apesar que que ya hay herramientas que crean contrasenas por defecto, este simple script lo hace de manera rapida y en la termianal. 
 
+**La utilizo mucho, asi que decidi compartirla. Talvez te sea util.**
+
 
 # Usar binario
 ```sh
@@ -9,7 +11,7 @@ Apesar que que ya hay herramientas que crean contrasenas por defecto, este simpl
 chmod +x gen.py
 
 #Ejecurar
-./gen,py
+./gen.py
 
 
 # Para usarlo como comando de sistema
