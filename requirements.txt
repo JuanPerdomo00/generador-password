@@ -1,1 +1,2 @@
 pyperclip3==0.4.1
+auto-py-to-exe==2.22.0
