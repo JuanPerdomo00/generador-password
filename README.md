@@ -9,7 +9,7 @@ Apesar que que ya hay herramientas que crean contrasenas por defecto, este simpl
 chmod +x gen.py
 
 #Ejecurar
-./genpy
+./gen,py
 
 
 # Para usarlo como comando de sistema
