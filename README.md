@@ -47,7 +47,11 @@ auto-pip-to-exe
 ## **About me** **🌌**
 
 ```html
-Mi nombre es juan. pero me dicen jakepys. Soy un programador autodidacta enamorado de el código y todo lo relacionado con linux, me encanta crear cositas y a pesar que son diminutas me ayuda aprender cada dia mas. Menester aclarar que me encanta Python, pero me encuentro aprendiendo JavaScript 💛. Así que cualquier duda o pregunta acerca de mí, puedes escribirme. 
+Mi nombre es juan. pero me dicen jakepys. 
+Soy un programador autodidacta enamorado de el código y todo lo relacionado con linux,
+me encanta crear cositas y a pesar que son diminutas me ayuda aprender cada dia mas.
+Menester aclarar que me encanta Python, pero me encuentro aprendiendo JavaScript 💛.
+Así que cualquier duda o pregunta acerca de mí, puedes escribirme. 
 <script>
    const aboutMe = {
       email: "j4kyjak3@protonmail.com",
