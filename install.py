@@ -50,7 +50,7 @@ def download_dependencies(file_path: str) -> None:
         time.sleep(2.1)
         clear()
         banner()
-        # move_binaries(os.environ["PWD"], "/usr/bin")
+        move_binaries(os.environ["PWD"], "/usr/bin")
 
 
 def main() -> None:
