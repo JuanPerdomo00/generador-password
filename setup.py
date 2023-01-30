@@ -10,6 +10,7 @@ setup(
     author="Jakepys - JuanPerdomo00",
     author_email="j4kyjak3@protenmail.com",
     license="GPLv3",
+    platforms="GNU/Linux",
     url="https://github.com/JuanPerdomo00/generador-password",
-    py_modules=[i.strip() for i in open("requirements.txt").readlines()]
+    py_modules=["pyperclip3"]
 )
