@@ -6,19 +6,17 @@ Although there are already tools that create passwords by default, this simple s
 **I use it a lot, so I decided to share it. Maybe it will be useful to you.**
 
 
-# Usar 
+# Use 
 ```sh
-# Linux x64
 chmod +x gen.py
 
-#Ejecurar
 ./gen.py
 
 
-# Para usarlo como comando de sistema
-sudo mv gen.py /usr/bin/genpy
+mv modules/ /usr/bin/modules
+mv gen.py /usr/bin/genpy
 
-# Luego podremos llamarlo
+
 genpy
 ```
 
