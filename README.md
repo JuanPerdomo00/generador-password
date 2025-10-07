@@ -1,4 +1,4 @@
-# PyssWord 🕵️‍♂️
+# Genpass 🕵️‍♂️
 A simple but efficient password generator, especially if you use keepass as a password manager. Passing the length of the password to be created as an argument.
 Although there are already tools that create passwords by default, this simple script does it quickly and on the fly.
 
