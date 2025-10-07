@@ -8,17 +8,11 @@ Although there are already tools that create passwords by default, this simple s
 
 # Use 
 ```sh
-pip install -r requirements.txt
-chmod +x gen.py
-./gen.py
-
-# use script bin
-mv modules/ /usr/bin/modules
-mv gen.py /usr/bin/genpy
-genpy
+make
+./genpass
 ```
 
-![](./img/v2.png)
+![](./img/image.png)
 
 - **At least the length must be 8**
 - **Copy the password to the clipboard**
