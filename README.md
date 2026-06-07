@@ -108,6 +108,13 @@ sudo dnf install xclip         # X11
 which pbcopy
 ```
 
+### Or install via AUR
+```bash
+paru -S genpass
+# or
+yay -S genpass 
+```
+
 ### "Error: no display environment detected"
 
 You're not in a graphical environment. Run from a terminal in X11 or Wayland, or use SSH with X11 forwarding.
