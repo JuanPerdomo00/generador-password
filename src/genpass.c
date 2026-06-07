@@ -24,9 +24,9 @@
  */
 
 #include "includes/genpass.h"
+#include "includes/random.h"
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 
 char *generate_password(int length) {
   if (length <= 0)
@@ -36,20 +36,40 @@ char *generate_password(int length) {
   if (!password)
     return NULL;
 
-  srand(time(NULL));
   if (length == 8) {
-    char all_chars[512] = "";
+    size_t total_size = 0;
     for (int i = 0; ARR_STRINGS[i] != NULL; i++) {
-      strcat(all_chars, ARR_STRINGS[i]);
+      total_size += strlen(ARR_STRINGS[i]);
     }
 
-    for (int i = 0; i < length; i++) {
-      password[i] = all_chars[rand() % strlen(all_chars)];
+    char *all_chars = malloc(total_size + 1);
+    if (!all_chars) {
+      free(password);
+      return NULL;
     }
+
+    all_chars[0] = '\0';
+    size_t pos = 0;
+    for (int i = 0; ARR_STRINGS[i] != NULL; i++) {
+      size_t len = strlen(ARR_STRINGS[i]);
+      if (pos + len > total_size) {
+        free(all_chars);
+        free(password);
+        return NULL;
+      }
+      memcpy(all_chars + pos, ARR_STRINGS[i], len);
+      pos += len;
+    }
+    all_chars[pos] = '\0';
+
+    for (int i = 0; i < length; i++) {
+      password[i] = all_chars[secure_random_int(total_size)];
+    }
+    free(all_chars);
   } else {
     for (int i = 0; i < length; i++) {
-      const char *set = ARR_STRINGS[rand() % 5];
-      password[i] = set[rand() % strlen(set)];
+      const char *set = ARR_STRINGS[secure_random_int(5)];
+      password[i] = set[secure_random_int(strlen(set))];
     }
   }
 
